@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>test</title>
-
-<div>     
-    <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=40.830200000000005~-73.9088&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">     
-    </iframe>     
-    <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">        
-     <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=40.830200000000005~-73.9088&amp;sty=r&amp;lvl=11&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;        
-     <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=40.830200000000005~-73.9088&amp;sty=r&amp;lvl=11&amp;rtp=~pos.40.830200000000005_-73.9088____&amp;FORM=MBEDLD">Get Directions</a>    
-    </div></div>
+  <head>
+    <title>Add Map</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4ttrhgAdNKQPHsBMaEKm1LreNxcMo19k&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+  </body>
+</html>
+inline.html
