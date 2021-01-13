@@ -1,40 +1,11 @@
 <!DOCTYPE html>
-        <html>
-        <head>
-        <meta charset="utf-8">
-        
-        <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
-        
-        <style>
-        #map {
-            width: 100%;
-            height: 600px;
-        }
-        </style>
-        
-        </head>
-        
-        <body>
-        <div id="map"></div>
-        
-        <script>
-        mapkit.init({
-            authorizationCallback: function(done) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "/services/jwt");
-                xhr.addEventListener("load", function() {
-                    done(this.responseText);
-                });
-                xhr.send();
-            }
-        });
-        
-        var Cupertino = new mapkit.CoordinateRegion(
-            new mapkit.Coordinate(37.3316850890998, -122.030067374026),
-            new mapkit.CoordinateSpan(0.167647972, 0.354985255)
-        );
-        var map = new mapkit.Map("map");
-        map.region = Cupertino;
-        </script>
-        </body>
-        </html>
+<html>
+<center>
+<div>
+     <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=39.97299927576148~-77.59995991510822&lvl=7&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+     </iframe>
+     <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+        <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=39.97299927576148~-77.59995991510822&amp;sty=r&amp;lvl=7&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+        <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=39.97299927576148~-77.59995991510822&amp;sty=r&amp;lvl=7&amp;rtp=~pos.39.97299927576148_-77.59995991510822____&amp;FORM=MBEDLD">Get Directions</a>
+    </div>
+</div>
