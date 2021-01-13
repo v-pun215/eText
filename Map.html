@@ -1,7 +1,33 @@
-<!DOCTYPE html>
-<html>
-<center>
-<div>
-     <iframe width="800" height="800" frameborder="0" src="https://www.bing.com/maps/embed?h=800&w=800&cp=40.830200000000005~-73.9088&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
-     </iframe>
-</div>
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <style> 
+      #map { 
+        height: 400px; 
+        width: 100%; 
+       } 
+    </style> 
+  </head> 
+  <body> 
+    <p>My Google Maps Demo</p> 
+    <div id="map"></div> 
+    <script> 
+      function initMap() { 
+        var test= {lat: -25.363, lng: 131.044}; 
+        var map = new google.maps.Map(document.getElementById('map'), { 
+          zoom: 4, 
+          center: test 
+        }); 
+        var marker = new google.maps.Marker({ 
+          position: test, 
+          map: map 
+        }); 
+      } 
+    </script> 
+    <script async defer 
+    src= 
+"https://maps.googleapis.com/maps/api/js?key= 
+AIzaSyB2bXKNDezDf6YNVc-SauobynNHPo4RJb8&callback=initMap"> 
+    </script> 
+  </body> 
+</html> 
