@@ -1,112 +1,41 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta name="keywords" content=
-  "PearOS, pear os, pearos, pearos download, pearos catalina, pearos catalina download, pear os cupertino download, pearos download 2020, pear os, pearos free,, pearos 2020, pearos download,, pear, pearos, linux, os, Operating System, pear os official website, pearos website 2020, pear os is back, new pearos, web Pear OS">
-  <meta name="tags" content=
-  "PearOS, pear os, pearos, pearos download, pearos catalina, pearos catalina download, pear os cupertino download, pearos download 2020, pear os, pearos free,, pearos 2020, pearos download,, pear, pearos, linux, os, Operating System, pear os official website, pearos website 2020, pear os is back, new pearos, web Pear OS">
-  <meta charset="utf-8">
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>PearOS Official Website</title>
-  <meta name="twitter:card" content="summary">
-  <meta name="description" content=
-  "This is the Official pearOS website. Download now!">
-  <meta property="og:description" content=
-  "This is the Official pearOS website. Download now!">
-  <meta property="og:image" content="https://PearOs.cf/assets/img/head.png">
-  <meta property="og:title" content="PearOS">
-  <meta property="og:type" content="website">
-  <script src=
-  "https://PearOs.cf/cdn-cgi/apps/head/yCmHkLprEwVtTM9k9HkLs4YQUu8.js"></script>
-  <link rel="icon" type="image/png" sizes="285x285" href=
-  "https://PearOs.cf/assets/img/head.png">
-  <link rel="stylesheet" href=
-  "https://PearOs.cf/assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href=
-  "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-  <link rel="stylesheet" href=
-  "https://fonts.googleapis.com/css?family=Asul">
-  <link rel="stylesheet" href=
-  "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
-  <link rel="stylesheet" href="https://PearOs.cf/assets/fonts/font-awesome.min.css">
-  <link rel="stylesheet" href="https://PearOs.cf/assets/fonts/ionicons.min.css">
-  <link rel="stylesheet" href=
-  "https://PearOs.cf/assets/fonts/simple-line-icons.min.css">
-  <link rel="stylesheet" href=
-  "assets/css/ac-global-footer.629372323b2f7c8699c3e4a21395a659.css">
-  <link rel="stylesheet" href=
-  "https://PearOs.cf/assets/css/ac-global-nav.40aec230af1b6b2dead2553cf6c2ffb5.css">
-  <link rel="stylesheet" href="https://PearOs.cf/assets/css/Auto-Modal-Popup.css">
-  <link rel="stylesheet" href=
-  "https://PearOs.cf/assets/css/Corporate-Footer-Clean.css">
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-  <link rel="stylesheet" href="https://PearOs.cf/assets/css/Navigation-Clean.css">
-  <link rel="stylesheet" href=
-  "https://PearOs.cf/assets/css/Navigation-with-Search.css">
-  <link rel="stylesheet" href=
-  "https://PearOs.cf/assets/css/Registration-Form-with-Photo.css">
-  <link rel="stylesheet" href="https://PearOs.cf/assets/css/Simple-Slider.css">
-  <link rel="stylesheet" href="https://PearOs.cf/assets/css/styles.css">
-  <link rel="stylesheet" href="https://PearOs.cf/assets/css/untitled.css">
-  <link rel="stylesheet" href=
-  "https://PearOs.cf/assets/css/web-experience-app-17a590d6736bb102579f3157ad7e1bed.css">
+<link type="text/css" rel="stylesheet" href="search_style.css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+function do_search()
+{
+ var search_term=$("#search_term").val();
+ $.ajax
+ ({
+  type:'post',
+  url:'get_results.php',
+  data:{
+   search:"search",
+   search_term:search_term
+  },
+  success:function(response) 
+  {
+   document.getElementById("result_div").innerHTML=response;
+  }
+ });
+ 
+ return false;
+}
+</script>
 </head>
-<body style="margin: auto;">
-  <section class="product macbook-pro dark" style="margin: auto;">
-    <nav class=
-    "navbar navbar-dark navbar-expand-md fixed-top bg-dark" style=
-    "filter: blur(0px);height: 43px;">
-      <div class="container">
-        <button data-toggle="collapse" class="navbar-toggler"
-        data-target="#navcol-1"><span class="sr-only">Toggle
-        navigation</span></button>
-        <div class="collapse navbar-collapse" id="navcol-1" style=
-        "filter: invert(0%) saturate(101%);margin: auto;height: 10px;padding: 0px 54px;">
-          <ul class=
-          "nav navbar-nav flex-grow-1 justify-content-between"
-          style="font-size: 21px;">
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href=
-              "#"><img class="img-fluid" src=
-              "yes.png" width="25"></a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#" style=
-              "font-size: 13px;padding: 12px;">Home</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="bugs.html" style=
-              "padding: 12px;">Begginer</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="sysreq.html" style=
-              "padding: 12px;">Easy</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="install.html" style=
-              "padding: 12px;">Pro</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="links.html" style=
-              "padding: 12px;">Know-it-all</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="google.html" style=
-              "padding: 12px;">Search</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#"></a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" href="products.html"><img src=
-              "ea.png" style=
-              "width: 20px;margin: 3px;"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<body>
+<div id="wrapper">
+
+<div id="search_box">
+ <form method="post"action="get_results.php" onsubmit="return do_search();">
+  <input type="text" id="search_term" name="search_term" placeholder="Enter Search" onkeyup="do_search();">
+  <input type="submit" name="search" value="SEARCH">
+ </form>
+</div>
+
+<div id="result_div"></div>
+
+</div>
+</body>
+</html>
