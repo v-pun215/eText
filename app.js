@@ -1,7 +1,7 @@
 document.getElementById("heading").innerHTML =
-  localStorage["title"] || "Just Write"; // default text
+  localStorage["title"] || "Heading"; // default text
 document.getElementById("content").innerHTML =
-  localStorage["text"] || "This text is automatically saved every second :) "; // default text
+  localStorage["text"] || "Content; Keep Writing It Will Adjust. "; // default text
 
 setInterval(function() {
   // fuction that is saving the innerHTML of the div
