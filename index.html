@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     <link rel='icon' href='92AC738E-E12B-4788-8B03-23EC715AF9DE.png' type='image/x-icon'/ >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+      $(document).ready(function(){
+             $("#file").change(function(){
+                   var length=this.files.length;
+                        if(!length){
+                          return false;
+                         }
+                        changeBackground(this);
+                });
+       });
+     
+      // Creating the function
+      function changeBackground(img){
+            var file = img.files[0];
+            var imagefile = file.type;
+            var match= ["image/jpeg","image/png","image/jpg"];
+                  if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+                        alert("Invalid File Extension");
+                  }else{
+                        var reader = new FileReader();
+                        reader.onload = imageIsLoaded;
+                        reader.readAsDataURL(img.files[0]);
+                  }
+            function imageIsLoaded(e) {
+                  $('body').css({ 'background-image': "url(" + e.target.result + ")" });
+           
+                  }     
+            }
+</script>
   </head><p>
 <style>
 .button {
@@ -39,4 +69,6 @@
     font-size: 18px; /* Changing font size */
 }
 </style>
+
+<input style="float:right; margin-right:5px;" type="file" name="" id="file" value="Click">
 </html>
